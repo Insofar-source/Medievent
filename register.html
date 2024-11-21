@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration</title>
+    <link rel="icon" href="images/ME.png">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:400,500,600' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+    <!-- =========================
+     PRE LOADER       
+============================== -->
+    <div class="preloader">
+
+        <div class="sk-rotating-plane"></div>
+
+    </div>
+
+
+    <!-- =========================
+     NAVIGATION LINKS     
+============================== -->
+    <div class="navbar navbar-fixed-top custom-navbar" role="navigation">
+        <div class="container" id="Regcon">
+            <!-- navbar header -->
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <a href="/index.html" class="navbar-brand">MEDIEVENTS</a>
+                <a class="navbar-brand" href="#"><img src="images/ME.png">
+            </div>
+
+            <div class="collapse navbar-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html" class="smoothScroll">Home</a></li>
+                    <li><a href="login.html" class="smoothScroll">Log In</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =========================
+     REGISTRATION      
+============================== -->
+
+    <section id="intro" class="parallax-section" style="height: 70vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h1 class="wow bounceIn" data-wow-delay=".9s">REGISTRATION</h1>
+                    <h2 class="wow fadeInUp" data-wow-delay="1.6s">For any queries regarding technical assistance,
+                        please contact Insofar Solutions at <b>+91 9025634295</b> (9:00 AM – 6:00 PM, working days).
+                        </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="reg" class="parallax-section">
+        <div class="container">
+            <div class="row">
+                <form id="prefilledForm">
+                    <label for="type of registration">Registration type:</label>
+                    <select id="registartion type" name="registration type" class="form-control"
+                        onchange="updateAmount()">
+                        <option value="" disabled selected>Select Registration Type</option>
+                        <option value="IDA">RC Member (IDA Member) - 10030.00</option>
+                        <option value="N IDA">RC Member (Non IDA Member) - 3540.00</option>
+                        <option value="D IDA">Delegate (IDA Member)- 5900.00</option>
+                        <option value="D N IDA">Delegate (Non IDA Member)- 1770.00</option>
+                        <option value="Student">Student - 1770.00</option>
+                        <option value="Foreign Delegate">Foreign Delegate - $ 295.00</option>
+                    </select>
+                    <label for="name">Name:</label>
+                    <input type="text" id="firstname" name="name" placeholder="Enter your name" class="form-control">
+                    <label for="idCardPhoto">Choose ID Card Photo:</label>
+                    <input type="file" id="idCardPhoto" accept="image/*" onchange="previewImage(event)">
+                    <p><img id="preview" alt="ID Card Preview" style="display:none;"></p>
+                    <label>Gender:</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+
+                    <label for="hospital">Hospital/Organization/Institute Name:</label>
+                    <input type="text" id="hospital" name="hospital"
+                        placeholder="Enter your Hospital/Organization/Institute Name" class="form-control">
+
+                    <label for="designation">Designation:</label>
+                    <input type="text" id="designation" name="designation" placeholder="Enter your designation"
+                        class="form-control">
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address"
+                        class="form-control">
+
+                    <label for="country">Select your country:</label>
+
+                    <select id="country" name="country" class="form-control">
+
+                        <option value="USA">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="India">India</option>
+                    </select>
+
+                    <label for="state">State:</label>
+                    <select id="state" name="state" class="form-control">
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and
+                            Diu</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                    </select>
+
+                    <label for="city">City:</label>
+                    <select id="city" name="city" class="form-control">
+                        <option value="Chennai">Chennai</option>
+                        <option value="Coimbatore">Coimbatore</option>
+                        <option value="Madurai">Madurai</option>
+                        <option value="Tiruchirappalli">Tiruchirappalli</option>
+                        <option value="Salem">Salem</option>
+                        <option value="Tirunelveli">Tirunelveli</option>
+                        <option value="Erode">Erode</option>
+                        <option value="Vellore">Vellore</option>
+                        <option value="Thoothukudi">Thoothukudi</option>
+                        <option value="Thanjavur">Thanjavur</option>
+                        <option value="Dindigul">Dindigul</option>
+                        <option value="Cuddalore">Cuddalore</option>
+                        <option value="Kanchipuram">Kanchipuram</option>
+                        <option value="Kumarapalayam">Kumarapalayam</option>
+                        <option value="Nagercoil">Nagercoil</option>
+                        <option value="Karaikudi">Karaikudi</option>
+                        <option value="Kumbakonam">Kumbakonam</option>
+                        <option value="Pollachi">Pollachi</option>
+                        <option value="Rajapalayam">Rajapalayam</option>
+                        <option value="Sivakasi">Sivakasi</option>
+                        <option value="Udhagamandalam">Udhagamandalam (Ooty)</option>
+                        <option value="Hosur">Hosur</option>
+                        <option value="Pudukkottai">Pudukkottai</option>
+                        <option value="Ambattur">Ambattur</option>
+                        <option value="Tiruppur">Tiruppur</option>
+                        <option value="Avadi">Avadi</option>
+                        <option value="Chengalpattu">Chengalpattu</option>
+                        <option value="Thiruvallur">Thiruvallur</option>
+                        <option value="Namakkal">Namakkal</option>
+                        <option value="Viluppuram">Viluppuram</option>
+                        <option value="Tindivanam">Tindivanam</option>
+                    </select>
+
+                    <label for="pin">Pin Code:</label>
+                    <input type="text" id="pin" name="pin" class="form-control">
+
+                    <label for="email">Email Id:</label>
+                    <input type="email" id="email" name="email" class="form-control">
+
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="phone" name="mobile" class="form-control">
+
+                    <label for="dentalCouncil">State Council No.:</label>
+                    <input type="text" id="dentalCouncil" name="dentalCouncil" class="form-control">
+
+                    <label for="idaMemberId">IDA Member ID:</label>
+                    <input type="text" id="idaMemberId" name="idaMemberId" class="form-control">
+
+                    <label>Food Preference (Only for those with Hospitality):</label>
+                    <div>
+                        <input type="radio" id="veg" name="foodPreference" value="veg">
+                        <label for="veg">Veg</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="nonVeg" name="foodPreference" value="non-veg">
+                        <label for="nonVeg">Non-Veg</label>
+                    </div>
+
+                    <label for="amount">Payment Information</label>
+                    <label for="amount">Amount in Rs:</label>
+                    <input type="text" id="amount" name="amount" class="form-control" readonly class="form-control">
+
+                    <label>Mode of Payment:</label>
+                    <div>
+                        <input type="radio" id="online" name="paymentMode" value="online">
+                        <label for="online">ONLINE PAYMENT (Debit Card/Credit Card/Net Banking/UPI)</label>
+                    </div>
+                    <p class="">Note: Extra up to 3% will be added as online payment processing charges. Online payment
+                        accepts debit and credit cards from all scheduled Indian banks.</p>
+
+                    <p>To continue, please click the SUBMIT button. It will redirect you to the online payment gateway.
+                    </p>
+
+                    <label for="comments">Any other comments/requests:</label>
+                    <input type="text" id="comments" name="comments" placeholder="Your comments...">
+                    <p><button type="submit" id="submit">Submit</button> &nbsp;<button type="reset" id="submit">Reset</button></p>
+                </form>
+                <div id="reviewModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h3>Review Your Details</h3>
+                        <p><strong>Name:</strong> <span id="reviewName"></span></p>
+                        <p><strong>Email:</strong> <span id="reviewEmail"></span></p>
+                        <p><strong>ID Card Photo:</strong><br><img id="reviewPhoto" src="#" alt="ID Card Preview"
+                                style="display: none; max-width: 100px; max-height: 100px;"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+    FOOTER SECTION   
+============================== -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <p class="wow fadeInUp" data-wow-delay="0.6s">Copyright &copy; 2016 Insofar Solutions
+
+                        | Design: <a rel="nofollow" href="" target="_parent">Insofar Solutions</a></p>
+
+                    <ul class="social-icon">
+                        <li><a href="#" class="fa fa-facebook wow fadeInUp" data-wow-delay="1s"></a></li>
+                        <li><a href="#" class="fa fa-twitter wow fadeInUp" data-wow-delay="1.3s"></a></li>
+                        <li><a href="#" class="fa fa-instagram wow fadeInUp" data-wow-delay="1.6s"></a></li>
+                        <li><a href="#" class="fa fa-linkedin wow fadeInUp" data-wow-delay="1.9s"></a></li>
+                    </ul>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- Back top -->
+    <a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+    <!-- =========================
+     SCRIPTS   
+============================== -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/loadFormData.js" defer></script>
+    <!-- <script src="js/info.js" defer></script> -->
+    <script src="js/regformdata.js" defer></script>
+    <script src="js/image.js" defer></script>
+    <script src="js/imagesave.js" defer></script>
+    <script>
+        // Function to show the popup (optional)
+
+        // JavaScript function to update the amount based on the selected registration type
+        function updateAmount() {
+            const registrationType = document.getElementById('registartion type').value;
+            const amountField = document.getElementById('amount');
+
+            // Amounts for each registration type
+            const registrationAmounts = {
+                "IDA": "10030.00",         // RC Member (IDA Member)
+                "N IDA": "11800.00",       // RC Member (Non IDA Member)
+                "D IDA": "3540.00",        // Delegate (IDA Member)
+                "D N IDA": "5900.00",      // Delegate (Non IDA Member)
+                "Student": "1770.00",      // Student
+                "Foreign Delegate": "$ 295.00" // Foreign Delegate (in $)
+            };
+
+            // Set the amount based on the selected option
+            amountField.value = registrationAmounts[registrationType] || '';
+        }
+    </script>
+</body>
+
+</html>
